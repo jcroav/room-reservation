@@ -6,11 +6,11 @@ Firstly, after installing the app, automatically will be checked if both lists e
 
 The first thing that you should do after creating the lists is to add all the rooms you want to put available to users. You can do this with the resources list created. You have to 
 
-![alt tag](https://github.com/jcroav/room-resevation/blob/master/Images/AddingResources.png)
+![alt tag](https://github.com/jcroav/room-reservation/blob/master/Images/AddingResources.png)
 
 Finally, the app is really easy. While you complete the date and hour information for your reservation, available rooms will change to show you rooms that you can choose because they are free.
 
-![alt tag](https://github.com/jcroav/room-resevation/blob/master/Images/Roomreservationapplication.png)
+![alt tag](https://github.com/jcroav/room-reservation/blob/master/Images/Roomreservationapplication.png)
 
 # Development skills
 
