@@ -57,6 +57,8 @@
     <Content Include="Content\fullcalendar.print.css" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Elements.xml" />
+    <Content Include="Images\AddingResources.png" />
+    <Content Include="Images\Roomreservationapplication.png" />
     <Content Include="Pages\Elements.xml" />
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{eba46a55-be53-4b45-bea7-ed1d79f4e49c}</SharePointProjectItemId>

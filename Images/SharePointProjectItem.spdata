@@ -3,5 +3,7 @@
   <Files>
     <ProjectItemFile Source="Elements.xml" Target="Images\" Type="ElementManifest" />
     <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="AddingResources.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="Roomreservationapplication.png" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>
