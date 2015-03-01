@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Content">
+    <File Path="Content\App.css" Url="Content/App.css" ReplaceContent="TRUE" />
+    <File Path="Content\bootstrap.min.css" Url="Content/bootstrap.min.css" ReplaceContent="TRUE" />
+    <File Path="Content\fullcalendar.css" Url="Content/fullcalendar.css" ReplaceContent="TRUE" />
+    <File Path="Content\fullcalendar.print.css" Url="Content/fullcalendar.print.css" ReplaceContent="TRUE" />
+    <File Path="Content\jquery-ui.min.css" Url="Content/jquery-ui.min.css" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

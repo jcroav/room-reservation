@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.map" Url="Scripts/jquery-1.9.1.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.js" Url="Scripts/jquery-1.9.1.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.js" Url="Scripts/jquery-1.9.1.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.intellisense.js" Url="Scripts/jquery-1.9.1.intellisense.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\fullcalendar.min.js" Url="Scripts/fullcalendar.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\moment.min.js" Url="Scripts/lib/moment.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\animated-overlay.gif" Url="Scripts/lib/cupertino/images/animated-overlay.gif" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" Url="Scripts/lib/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" Url="Scripts/lib/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" Url="Scripts/lib/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" Url="Scripts/lib/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" Url="Scripts/lib/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" Url="Scripts/lib/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" Url="Scripts/lib/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" Url="Scripts/lib/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" Url="Scripts/lib/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-icons_2e83ff_256x240.png" Url="Scripts/lib/cupertino/images/ui-icons_2e83ff_256x240.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-icons_3d80b3_256x240.png" Url="Scripts/lib/cupertino/images/ui-icons_3d80b3_256x240.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-icons_72a7cf_256x240.png" Url="Scripts/lib/cupertino/images/ui-icons_72a7cf_256x240.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-icons_2694e8_256x240.png" Url="Scripts/lib/cupertino/images/ui-icons_2694e8_256x240.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\cupertino\images\ui-icons_ffffff_256x240.png" Url="Scripts/lib/cupertino/images/ui-icons_ffffff_256x240.png" ReplaceContent="TRUE" />
+    <File Path="Scripts\lang\en-gb.js" Url="Scripts/lang/en-gb.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lang\es.js" Url="Scripts/lang/es.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lang-all.js" Url="Scripts/lang-all.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\RoomReservation.js" Url="Scripts/RoomReservation.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\npm.js" Url="Scripts/npm.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-ui-1.10.4.custom.min.js" Url="Scripts/jquery-ui-1.10.4.custom.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Utils.js" Url="Scripts/Utils.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

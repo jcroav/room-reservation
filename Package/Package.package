@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="53abf0f5-0011-4894-8606-c7dd7998af14" solutionId="53abf0f5-0011-4894-8606-c7dd7998af14" resetWebServer="false" sharePointProductVersion="16.0" name="RoomReservation" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="25e45f0c-301f-46f8-a0e5-077c9616b8b2" />
+  </features>
+</package>

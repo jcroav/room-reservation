@@ -1,0 +1,81 @@
+﻿/* Inserte estilos personalizados debajo */
+@-webkit-keyframes move
+{
+    0%   {top: 60%;}
+    50%  {top: 30%;}
+    100% {top: 0%;}
+}
+
+@keyframes move {
+    0%   {top: 60%;}
+    50%  {top: 30%;}
+    100% {top: 0%;}
+}
+
+
+.reservation-box{
+    background-color: #f7f7f9;
+    padding:2em;
+    margin:0 auto;
+    margin-bottom:2em;
+    float:left;
+}
+
+.body-element{
+    padding:3em;
+}
+
+.room-list{float:left;width:100%;list-style:none;margin-bottom:1.5em;margin-top:1.5em;}
+.room-list li{width:24%;margin-right:1%;height:10em;position:relative;float:left;border:1px solid #000;overflow:hidden;}
+.room-list li .information{padding:0.5em;width:100%;height:100%;position:absolute;top:80%;background-color:rgba(0,0,0,0.3);}
+    .room-list li:hover
+    {
+        cursor:pointer;
+    }
+    .room-list li:hover .information {
+        /* Chrome, Safari, Opera */
+        -webkit-animation-name: move;
+        -webkit-animation-duration: 0.3s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-fill-mode:forwards;
+        /* Standard syntax */
+        animation-name: move;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+
+    }
+    .room-list li .information span{font-size:12px;}
+    .room-list .selected .information
+    {
+        top:0;
+    }
+.success{color:#449d44;}
+.error{color:#cb1515;}
+
+.fc-sat, .fc-sun {
+    background-color: #d9edf7!important;
+}
+
+.fc-center{
+    margin-top:0.5em;
+}
+
+.room-reservation-label{
+    text-align:center;
+}
+
+.room-reservation-label-title{
+    background-color: #337ab7;
+    color: #FFF;
+    padding: 0.5em 0 0.5em 0;
+    border-radius: 4px;
+    text-align:center;
+}
+
+.room-reservation-button{
+    width:30%;
+    margin-left:35%;
+}

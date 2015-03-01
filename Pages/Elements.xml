@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages">
+    <File Path="Pages\RoomReservation.aspx" Url="Pages/RoomReservation.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\Install.aspx" Url="Pages/Install.aspx" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
