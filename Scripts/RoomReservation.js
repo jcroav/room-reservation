@@ -376,6 +376,8 @@ MyApp.RoomReservation = function () {
                     $("#" + success).html("Reservation correctly done!");
                     $("#" + success).addClass("success");
                     MyApp.RoomReservation.LoadCalendar(id);
+
+                    setTimeout(function () { $("#" + success).html(""); }, 2000);
                     
                 },
                 error: function (data) {

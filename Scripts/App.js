@@ -70,7 +70,7 @@ $(document).ready(function () {
             $("#startHour").val("0");
             $("#endHour").val("0");
             $("#colourRoomSelected").val("");
-            $("#roomSelected").val("Room Selected: -None-")
+            $("#roomSelected").html("Room Selected: -None-")
             $("li.room").removeClass("selected");
         }
         else
