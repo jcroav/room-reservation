@@ -16,14 +16,16 @@ Finally, the app is really easy. While you complete the date and hour informatio
 
 The main goal to create this app is to learn about the new SharePoint App Model. For this purpose, I decided only use API REST call to access to SharePoint Information.
 
-I have tried to start using the new remote provisioning model to develop with SharePoint. To do this, lists and custom fields will be created from the object client model through API REST too.
+I have tried to start using the new remote provisioning model to develop with SharePoint. To do this, lists and custom fields have been created from the object client model through API REST too.
 
 # Next Steps
 
-I will try to improve UX
-I will try to improve the responsive desing
-Show information about your reservations done
+During the next weeks, I would like to follow with the development of this app. The main fields where I want to work are:
 
-
+<ul>
+<li>I will try to improve UX</li>
+<li>I will try to improve the responsive desing</li>
+<li>Show information about your reservations done</li>
+</ul>
 
 Please, if you want to improve or contribute with this app, feel enough confortable to modify and work with the code
