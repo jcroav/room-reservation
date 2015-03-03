@@ -4,7 +4,7 @@ RoomReservation is a SharePoint Hosted Application created to allow a simple and
 
 Firstly, after installing the app, automatically will be checked if both lists exist. If the answer is no, the app will redirect you to a page to create them, after that, you will be able to use RoomReservation correctly.
 
-The first thing that you should do after creating the lists is to add all the rooms you want to put available to users. You can do this with the resources list created. You have to 
+The first thing that you should do after creating the lists is to add all the rooms you want to put available to users. You can do this with the resources list created. You have to write: the room name, a short description about it, the capacity and finally you must to give the colour that you want to use to recognize these room in the calendar.
 
 ![alt tag](https://github.com/jcroav/room-reservation/blob/master/Images/AddingResources.png)
 
