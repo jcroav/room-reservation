@@ -5,5 +5,6 @@
     <ProjectItemFile Source="AppIcon.png" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="AddingResources.png" Target="Images\" Type="ElementFile" />
     <ProjectItemFile Source="Roomreservationapplication.png" Target="Images\" Type="ElementFile" />
+    <ProjectItemFile Source="logo.png" Target="Images\" Type="ElementFile" />
   </Files>
 </ProjectItem>

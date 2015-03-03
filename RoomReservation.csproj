@@ -47,6 +47,9 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a2e602c7-b437-4c1b-b42d-4fb75379107d}</SharePointProjectItemId>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{da85b439-d694-4e37-91c5-9160011f0225}</SharePointProjectItemId>
@@ -58,6 +61,12 @@
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Elements.xml" />
     <Content Include="Images\AddingResources.png" />
+    <Content Include="Images\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Images\logo.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
     <Content Include="Images\Roomreservationapplication.png" />
     <Content Include="Pages\Elements.xml" />
     <None Include="SharePointProjectItem.spdata">
@@ -111,15 +120,6 @@
     <Content Include="Content\App.css" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\AppIcon.png">
-      <OpcRelationship>manifest-icon</OpcRelationship>
-    </Content>
-    <Content Include="Images\Elements.xml" />
-    <None Include="Images\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{2ff53899-b95e-4ac8-9ea0-80f8637cd877}</SharePointProjectItemId>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Package\Package.package">
       <PackageId>{53abf0f5-0011-4894-8606-c7dd7998af14}</PackageId>
     </None>
@@ -143,6 +143,21 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources %28Host Web%29\Resources.resx">
+      <OpcRelationship>content-defaultresource</OpcRelationship>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources %28Host Web%29\Resources.en.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources %28Host Web%29\Resources.es-ES.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

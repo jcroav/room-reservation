@@ -3,18 +3,22 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="RoomReservation"
      ProductID="{da85b439-d694-4e37-91c5-9160011f0225}"
-     Version="1.1.0.0"
+     Version="1.3.0.0"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>
     <StartPage>~appWebUrl/Pages/RoomReservation.aspx?{StandardTokens}&amp;CalendarList=RoomReservationCalendar&amp;RoomList=RoomReservationResources</StartPage>
-    <Title>Room Reservation</Title>
+    <Title>$Resources:App_Title;</Title>
+    <SupportedLocales>
+      <SupportedLocale CultureName="en" />
+      <SupportedLocale CultureName="es-ES" />
+    </SupportedLocales>
   </Properties>
 
   <AppPrincipal>
     <Internal />
   </AppPrincipal>
   <AppPermissionRequests>
-    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
   </AppPermissionRequests>
 </App>

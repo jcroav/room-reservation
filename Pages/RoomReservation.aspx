@@ -3,12 +3,15 @@
 <%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <WebPartPages:AllowFraming ID="AllowFraming1" runat="server" />
 
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
 <link href="../Content/jquery-ui.min.css" rel="stylesheet" />
 <link href="../Content/fullcalendar.css" rel="stylesheet" />
 <link href="../Content/App.css" rel="stylesheet" />
 <link href="../Content/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
 
+<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
 <script src="../Scripts/lib/moment.min.js"></script>
 <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
 <script src="../Scripts/jquery-ui-1.10.4.custom.min.js"></script>
