@@ -5,47 +5,55 @@ MyApp.RoomReservation.Validation();
 // Este código se ejecuta cuando el DOM está preparado y crea un objeto de contexto necesario para poder usar el modelo de objetos de SharePoint
 $(document).ready(function () {
 
-    MyApp.RoomReservation.Initialization();
+    $.when(MyApp.AppSPUtils.RenderLanguage())
+    .done(function () {
+        MyApp.AppSPUtils.RenderAppNav(MyApp.language['appname']);
 
-    MyApp.AppSPUtils.RenderAppNav("Room Reservation");
-    MyApp.RoomReservation.GetRooms("Rooms");
+        MyApp.RoomReservation.Initialization();
+        MyApp.RoomReservation.GetRooms("Rooms");
 
-    $("#calendar").fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,agendaWeek,agendaDay'
-        },
-        editable: false,
-        firstDay: 1,
-        weekNumbers: true,
-        eventLimit: true
-    });
+        $(".body-element").css("display", "block");
 
-    MyApp.RoomReservation.LoadCalendar("calendar");
+        $("#calendar").fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            lang: MyApp.language['fullcalendarlang'],
+            editable: false,
+            firstDay: 1,
+            weekNumbers: true,
+            eventLimit: true
+        });
 
-    $("#reservationDay").datepicker({
-        dateFormat: 'dd/mm/yy',
-        firstDay: 1,
-        minDate: 0,
-        beforeShowDay: $.datepicker.noWeekends,
-        onSelect: function () {
-            var initHour = $("#startHour").val();
-            var endHour = $("#endHour").val();
+        MyApp.RoomReservation.LoadCalendar("calendar");
 
-            if (initHour == "0")
-                initHour = "09:00";
+        $("#reservationDay").datepicker({
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            minDate: 0,
+            monthNames: [MyApp.language["January"], MyApp.language["February"], MyApp.language["March"], MyApp.language["April"], MyApp.language["May"], MyApp.language["June"], MyApp.language["July"], MyApp.language["August"], MyApp.language["September"], MyApp.language["October"], MyApp.language["November"], MyApp.language["December"]],
+            dayNamesMin: [MyApp.language["Su"], MyApp.language["Mo"], MyApp.language["Tu"], MyApp.language["We"], MyApp.language["Th"], MyApp.language["Fr"], MyApp.language["Sa"]],
+            beforeShowDay: $.datepicker.noWeekends,
+            onSelect: function () {
+                var initHour = $("#startHour").val();
+                var endHour = $("#endHour").val();
 
-            if (endHour == "0")
-                endHour = "09:00";
+                if (initHour == "0")
+                    initHour = "09:00";
 
-            var initDate = $(this).val().split('/').reverse().join('-') + "T" + initHour + ":00";
-            var endDate = $(this).val().split('/').reverse().join('-') + "T" + endHour + ":00";
+                if (endHour == "0")
+                    endHour = "09:00";
 
-            MyApp.RoomReservation.GetAvailableRooms(initDate, endDate, "Rooms");
-        }
-    });
+                var initDate = $(this).val().split('/').reverse().join('-') + "T" + initHour + ":00";
+                var endDate = $(this).val().split('/').reverse().join('-') + "T" + endHour + ":00";
 
+                MyApp.RoomReservation.GetAvailableRooms(initDate, endDate, "Rooms");
+            }
+        });
+    })
+    
     $("#doReservation").click(function () {
 
         var subject = $("#reservationInformation").val();
@@ -123,7 +131,7 @@ $(document).ready(function () {
 
     $("#allDayOption").click(function () {
         
-        if (date != "") {
+        var date = $("#reservationDay").val();
 
             var date = $("#reservationDay").val();
             var initDate = date.split('/').reverse().join('-');
@@ -131,31 +139,36 @@ $(document).ready(function () {
 
             if ($(this).is(':checked')) {
 
-                initDate = initDate + "T09:00:00";
-                endDate = endDate + "T21:00:00";
-
                 $("#startHour").val("09:00");
                 $("#endHour").val("21:00");
 
                 $("#startHour").attr("disabled", "disabled");
                 $("#endHour").attr("disabled", "disabled");
 
-                MyApp.RoomReservation.GetAvailableRooms(initDate, endDate, "Rooms");
+                if (date != "") {
+                    initDate = initDate + "T09:00:00";
+                    endDate = endDate + "T21:00:00";
+
+                    MyApp.RoomReservation.GetAvailableRooms(initDate, endDate, "Rooms");
+                }
             }
             else
             {
-                initDate = initDate + "T09:00:00";
-                endDate = endDate + "T09:00:00";
-
                 $("#startHour").val("0");
                 $("#endHour").val("0");
 
                 $("#startHour").removeAttr("disabled");
                 $("#endHour").removeAttr("disabled");
 
-                MyApp.RoomReservation.GetAvailableRooms(initDate, endDate, "Rooms");
+
+                if (date != "") {
+                    initDate = initDate + "T09:00:00";
+                    endDate = endDate + "T09:00:00";
+
+
+                    MyApp.RoomReservation.GetAvailableRooms(initDate, endDate, "Rooms");
+                }
             }
-        }
     });
 
     $("ul").on("click", "li.room", function () {
@@ -163,7 +176,7 @@ $(document).ready(function () {
         $("li.room").removeClass("selected");
         $(this).addClass("selected");
 
-        $("#roomSelected").html("Room Selected: " + $(this).attr("content"));
+        $("#roomSelected").html(MyApp.language["selected"] + ": " + $(this).attr("content"));
         $("#titleRoomSelected").val($(this).attr("content"));
         $("#colourRoomSelected").val($("#colour" + $(this).attr("id")).val());
     })

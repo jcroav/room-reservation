@@ -32,5 +32,7 @@
     <ProjectItemFile Source="npm.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="jquery-ui-1.10.4.custom.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="Utils.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="resources\en.js" Target="Scripts\resources\" Type="ElementFile" />
+    <ProjectItemFile Source="resources\es-ES.js" Target="Scripts\resources\" Type="ElementFile" />
   </Files>
 </ProjectItem>

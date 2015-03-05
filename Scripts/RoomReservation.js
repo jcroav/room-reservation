@@ -10,9 +10,16 @@ MyApp.RoomReservation = function () {
         var roomsHTML = "";
 
         var results = jsonObject.d.results;
-        for (var i = 0; i < results.length; i++) {
-            roomsHTML = roomsHTML +
-                "<li content='" + results[i].Title + "' id='" + results[i].ID + "' class='room'><input type='hidden' id='colour" + results[i].ID + "' value='" + results[i].colour + "' /><div class='information'><span>" + results[i].Title + "</span><br /><br /><span>Descripcion: " + results[i].description + "</span><br /><span>Room Capacity: " + results[i].roomcapacity + "</span></div></li>";
+
+        if (results.length == 0) {
+            roomsHTML = "<li class='no-rooms'>" + MyApp.language["noroom"] + "</li>";
+
+        }
+        else{
+            for (var i = 0; i < results.length; i++) {
+                roomsHTML = roomsHTML +
+                    "<li content='" + results[i].Title + "' id='" + results[i].ID + "' class='room'><input type='hidden' id='colour" + results[i].ID + "' value='" + results[i].colour + "' /><div class='information'><span>" + results[i].Title + "</span><br /><br /><span>" + MyApp.language["description"] + ": " + results[i].description + "</span><br /><span>" + MyApp.language["capacity"] + ": " + results[i].roomcapacity + "</span></div></li>";
+            }
         }
 
         var elementRoot = document.getElementById(id);
@@ -106,7 +113,7 @@ MyApp.RoomReservation = function () {
                         executor.executeAsync({
                             method: "POST",
                             url: appweburl + "/_api/SP.AppContextSite(@target)/web/Lists/getbytitle('" + listname + "')/fields?@target='" + hostweburl + "'",
-                            body: "{ '__metadata': { 'type': 'SP.Field' }, 'Title': 'colour', 'FieldTypeKind': 2 }",
+                            body: "{ '__metadata': { 'type': 'SP.Field' }, 'Title': 'colour', 'Description': 'Please, use hex colour notation (#RRGGBB) to get it work correctly', 'FieldTypeKind': 2 }",
                             headers: {
                                 "accept": "application/json;odata=verbose",
                                 "content-type": "application/json;odata=verbose"
@@ -173,7 +180,6 @@ MyApp.RoomReservation = function () {
                 LoadList(data, id);
             },
             error: function (data) {
-                console.log(data);
             }
         });
 
@@ -196,7 +202,6 @@ MyApp.RoomReservation = function () {
                 deferred.resolve();
             },
             error: function (data) {
-                console.log(data);
                 deferred.reject();
             }
         });
@@ -297,11 +302,11 @@ MyApp.RoomReservation = function () {
         {
             var stringToReturn = "";
 
-            if (subject == "") stringToReturn += "You have to set the subject of your reservation\n";
-            if (date == "") stringToReturn += "You have to set the reservation day\n";
-            if (initHour == "0") stringToReturn += "You need to speficy the start hour\n";
-            if (endHour == "0") stringToReturn += "You need to speficy the end hour\n";
-            if (room == "") stringToReturn += "You have to set the room selected\n";
+            if (subject == "") stringToReturn += MyApp.language["subjectneeded"] +"\n";
+            if (date == "") stringToReturn += MyApp.language["dayneeded"] +"\n";
+            if (initHour == "0") stringToReturn += MyApp.language["startneeded"] +"\n";
+            if (endHour == "0") stringToReturn += MyApp.language["endneeded"] +"\n";
+            if (room == "") stringToReturn += MyApp.language["roomneeded"] + "\n";
 
             return stringToReturn;
         },
@@ -315,16 +320,16 @@ MyApp.RoomReservation = function () {
 
                  $.when(CreateFieldList(reservationList, "Colour", "2"), CreateFieldResourceList(resourceList))
                   .done(function () {
-                      $("#" + returnID).html("lists have been created successfully!!!");
+                      $("#" + returnID).html(MyApp.language["successful"]);
                       $("#" + returnID).addClass("success");
                   })
                   .fail(function () {
-                      $("#" + returnID).html("error adding list fields");
+                      $("#" + returnID).html(MyApp.language["errorfield"]);
                       $("#" + returnID).addClass("error");
                   });
              })
              .fail(function () {
-                 $("#" + returnID).html("error creating lists");
+                 $("#" + returnID).html(MyApp.language["errorlist"]);
                  $("#" + returnID).addClass("error");
              });
         },
@@ -348,7 +353,6 @@ MyApp.RoomReservation = function () {
                     LoadList(data,id)
                 },
                 error: function(data){
-                    console.log(data);
                 }
             });
         },
@@ -373,7 +377,7 @@ MyApp.RoomReservation = function () {
                     "content-type": "application/json;odata=verbose"
                 },
                 success: function (data) {
-                    $("#" + success).html("Reservation correctly done!");
+                    $("#" + success).html(MyApp.language["done"]);
                     $("#" + success).addClass("success");
                     MyApp.RoomReservation.LoadCalendar(id);
 
@@ -381,7 +385,7 @@ MyApp.RoomReservation = function () {
                     
                 },
                 error: function (data) {
-                    $("#" + success).html("Reservation couldn't be done!");
+                    $("#" + success).html(MyApp.language["fail"]);
                     $("#" + success).addClass("error");
                 }
             });
@@ -407,7 +411,6 @@ MyApp.RoomReservation = function () {
                     GetFreeRoom(data.body, id);
                 },
                 error: function (data) {
-                    console.log(data);
                 }
             });
         },
@@ -433,7 +436,6 @@ MyApp.RoomReservation = function () {
                     $('#calendar').fullCalendar('rerenderEvents');
                 },
                 error: function (data) {
-                    console.log(data);
                 }
             });
         }

@@ -23,6 +23,7 @@
 
 .body-element{
     padding:3em;
+    display:none;
 }
 
 .room-list{float:left;width:100%;list-style:none;margin-bottom:1.5em;margin-top:1.5em;}
@@ -51,6 +52,10 @@
     .room-list .selected .information
     {
         top:0;
+    }
+    .room-list .no-rooms {
+        border:0;
+        width:100%;
     }
 .success{color:#449d44;}
 .error{color:#cb1515;}

@@ -46,22 +46,22 @@
 <div class="body-element">
     <div class="container col-sm-6 reservation-box">
         <div class="form-group col-sm-12">
-            <label for="reservationInformation" class="col-sm-4 control-label">Reservation Information</label>
+            <label for="reservationInformation" class="col-sm-4 control-label" data-language="reservationinformation">Reservation Information</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="reservationInformation" placeholder="Give us the subject of your booking">
+                <input type="text" class="form-control" id="reservationInformation" data-language="setreservationinformation" placeholder="Give us the subject of your booking">
             </div>
         </div>
         <div class="form-group col-sm-12">
-            <label for="reservationDay" class="col-sm-4 control-label">Reservation Day:</label>
+            <label for="reservationDay" class="col-sm-4 control-label" data-language="reservationday">Reservation Day:</label>
             <div class="col-sm-8">
-                <input type="datetime" class="form-control" id="reservationDay" placeholder="Set the reservation day here!">
+                <input type="datetime" class="form-control" id="reservationDay" data-language="setreservationday" placeholder="Set the reservation day here!">
             </div>
         </div>
         <div class="form-group col-sm-12">
-            <label for="startHour" class="col-sm-4 control-label">Start Hour:</label>
+            <label for="startHour" class="col-sm-4 control-label" data-language="starthour">Start Hour:</label>
             <div class="col-sm-8">
                 <select id="startHour" class="form-control">
-                    <option value="0">- Select the start hour -</option>
+                    <option value="0" data-language="selectstarthour">- Select the start hour -</option>
                     <option value="09:00">09:00</option>
                     <option value="09:30">09:30</option>
                     <option value="10:00">10:00</option>
@@ -91,10 +91,10 @@
             </div>
         </div>
         <div class="form-group col-sm-12">
-            <label for="endHour" class="col-sm-4 control-label">End Hour:</label>
+            <label for="endHour" class="col-sm-4 control-label" data-language="endhour">End Hour:</label>
             <div class="col-sm-8">
                 <select id="endHour" class="form-control">
-                    <option value="0">- Select the end hour -</option>
+                    <option value="0" data-language="selectendhour">- Select the end hour -</option>
                     <option value="09:00">09:00</option>
                     <option value="09:30">09:30</option>
                     <option value="10:00">10:00</option>
@@ -124,20 +124,20 @@
             </div>
         </div>
         <div class="form-group col-sm-12">
-            <label for="allDayOption" class="col-sm-4 control-label">All Day Reservation</label>
+            <label for="allDayOption" class="col-sm-4 control-label" data-language="alldayreservation">All Day Reservation</label>
             <input type="checkbox" id="allDayOption" aria-label="...">
         </div>
         <div class="row col-sm-12">
-            <label for="roomAvailable" class="col-sm-12 control-label room-reservation-label-title">Rooms Available</label>
+            <label for="roomAvailable" class="col-sm-12 control-label room-reservation-label-title" data-language="roomsavailable">Rooms Available</label>
         </div>
         <div class="row  col-sm-12">
             <ul id="Rooms" class="room-list"></ul>
-            <span id="roomSelected" class="col-sm-12 control-label room-reservation-label">Room Selected: -None-</span>
+            <span id="roomSelected" class="col-sm-12 control-label room-reservation-label" data-language="nonselected">Room Selected: -None-</span>
             <input type="hidden" id="titleRoomSelected" />
             <input type="hidden" id="colourRoomSelected" />
         </div>
         <div class="row  col-sm-12">
-            <button id="doReservation" class="btn btn-info room-reservation-button">Do Reservation!</button>
+            <button id="doReservation" class="btn btn-info room-reservation-button" data-language="doreservation">Do Reservation!</button>
         </div>
         <div class="row  col-sm-12">
            <span id="informationResult" class="col-sm-12 room-reservation-label"></span>

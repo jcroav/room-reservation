@@ -31,5 +31,7 @@
     <File Path="Scripts\npm.js" Url="Scripts/npm.js" ReplaceContent="TRUE" />
     <File Path="Scripts\jquery-ui-1.10.4.custom.min.js" Url="Scripts/jquery-ui-1.10.4.custom.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\Utils.js" Url="Scripts/Utils.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\resources\en.js" Url="Scripts/resources/en.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\resources\es-ES.js" Url="Scripts/resources/es-ES.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

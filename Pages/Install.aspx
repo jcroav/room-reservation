@@ -33,13 +33,13 @@
 <div id="chrome_ctrl_placeholder"></div>
 
 <div class="body-element">
-    <h1>Information Message</h1>
+    <h1 data-language="titlemessage">Information Message</h1>
 
-    <p>The Calendar and Resources lists don't exist.</p>
+    <p data-language="doesntexistmessage">The Calendar and Resources lists don't exist.</p>
 
-    <p>Do you want to create now?. Push "Create" Button</p>
+    <p data-language="advertisementmessage">Do you want to create now?. Push "Create" Button</p>
 
-    <button id="AddList">Create</button>
+    <button id="AddList" data-language="create">Create</button>
 
     <span id="Result"></span>
 
@@ -48,7 +48,12 @@
 <script>
     $(document).ready(function () {
 
-        MyApp.AppSPUtils.RenderAppNav("Room Reservation");
+        $.when(MyApp.AppSPUtils.RenderLanguage())
+        .done(function () {
+
+            MyApp.AppSPUtils.RenderAppNav(MyApp.language["appname"]);
+            $(".body-element").css("display", "block");
+        });
 
         $("#AddList").click(function () {
             var result = MyApp.RoomReservation.CreateList("Result");

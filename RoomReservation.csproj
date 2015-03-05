@@ -108,6 +108,8 @@
     <Content Include="Scripts\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
     <Content Include="Scripts\lib\moment.min.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\resources\en.js" />
+    <Content Include="Scripts\resources\es-ES.js" />
     <Content Include="Scripts\RoomReservation.js" />
     <Content Include="Scripts\Utils.js" />
     <Content Include="Scripts\_references.js" />

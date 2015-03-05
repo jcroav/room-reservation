@@ -26,6 +26,26 @@ MyApp.AppSPUtils = function () {
 
         var nav = new SP.UI.Controls.Navigation("chrome_ctrl_placeholder", options);
         nav.setVisible(true);
+
+
+    }
+
+
+    var LoadLanguage = function () {
+        $("*[data-language]").each(function () {
+
+            var element = $(this);
+
+            switch (element.get(0).tagName) {
+                case "INPUT":
+                    element.attr("placeholder", MyApp.language[element.attr("data-language")]).blur();
+                    break;
+                case "BUTTON":
+                default:
+                    element.html(MyApp.language[element.attr("data-language")]);
+                    break;
+            }
+        });
     }
 
     return {
@@ -44,8 +64,32 @@ MyApp.AppSPUtils = function () {
 
         RenderAppNav: function (appName) {
             RenderChrome(appName);
-        }
+        },
 
+        RenderLanguage: function () {
+
+            $.ajaxSetup({
+                error: function (x, e) {
+                    $.get("../Scripts/resources/en.js", function () {
+                        LoadLanguage();
+                        deferred.resolve();
+                    })
+                
+                }
+            });
+
+            var deferred = $.Deferred();
+
+            var language = GetParameter("SPLanguage");
+
+            $.get("../Scripts/resources/" + language + ".js",function()
+            {
+                LoadLanguage();
+                deferred.resolve();
+            })
+
+            return deferred.promise();
+        }
         
     }
 }();
